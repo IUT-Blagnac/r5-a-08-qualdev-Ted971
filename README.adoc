@@ -30,3 +30,42 @@ image::tp1tests.PNG[width=80%]
 
 
 == TP2...
+[source,java]
+
+private String owner;
+    private String target;
+    private List<String> cocktails = new ArrayList<>();
+    private String message;
+
+    public void setCocktails(int n) {
+        for(int i=0; i<n; i++){
+            cocktails.add("cocktail"+n);
+        }
+    }
+
+    public void declareOwner(String dOwner) {
+        this.owner = dOwner;
+    }
+
+    public void declareTarget(String dTarget) {
+        this.target = dTarget;
+    }
+
+    public List<String> getCocktails() {
+        return cocktails;
+    }
+
+    public void addMessage(String message) {
+        this.message = message;
+    }
+
+    public Object getMessage() {
+        return "From "+owner+" to "+target+": "+this.message;
+    }
+
+}
+
+
+
+.Exemple d'image insérée en asciidoc
+image::tp2tests.PNG[width=80%]
